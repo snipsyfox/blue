@@ -32,8 +32,8 @@ repos:
       hooks:
           - id: 'compiling...'
             name: 'building...'
-            language: system
+            language: node
             args: [-p, tsconfig.json, --outDir, dist]
-            entry: npx tsc
+            entry: tsc
             pass_filenames: false
             stages: [commit, push]
