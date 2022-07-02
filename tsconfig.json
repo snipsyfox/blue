@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "baseUrl": "src",
+        "experimentalDecorators": true,
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "dist",
+        "paths": {
+            "@blue/*": ["./packages/*"]
+        },
+        "esModuleInterop": true,
+        "pretty": true,
+        "resolveJsonModule": true,
+        "strict": true,
+        "target": "ES2020"
+    }
+}

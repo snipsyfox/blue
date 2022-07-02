@@ -14,5 +14,10 @@
     "bugs": {
         "url": "https://github.com/snipsyfox/blue/issues"
     },
-    "homepage": "https://github.com/snipsyfox/blue#readme"
+    "homepage": "https://github.com/snipsyfox/blue#readme",
+    "dependencies": {
+        "detritus-client": "^0.16.3",
+        "module-alias": "^2.2.2",
+        "typescript": "^4.6.0"
+    }
 }
