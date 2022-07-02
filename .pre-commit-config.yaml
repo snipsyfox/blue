@@ -28,3 +28,12 @@ repos:
             files: \.[jt]sx?$
             args: [-c, .eslintrc]
             types: [file]
+    - repo: local
+      hooks:
+          - id: 'compiling...'
+            name: 'building...'
+            language: system
+            args: [-p, tsconfig.json, --outDir, dist]
+            entry: npx tsc
+            pass_filenames: false
+            stages: [commit, push]
