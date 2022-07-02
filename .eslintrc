@@ -1,0 +1,36 @@
+{
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 11
+    },
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+    "rules": {
+        "semi": "error",
+        "no-case-declarations": "off",
+        "quotes": ["error", "single"],
+        "max-len": [
+            "error",
+            {
+                "code": 100
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/no-non-null-assertion": "error",
+        "no-console": "off",
+        "no-useless-escape": "error",
+        "no-empty": "error",
+        "no-var": "error",
+        "no-mixed-spaces-and-tabs": "error",
+        "prefer-const": "error",
+        "require-atomic-updates": "off"
+    },
+    "globals": {
+        "BigInt": true
+    }
+}
