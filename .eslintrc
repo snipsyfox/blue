@@ -21,6 +21,7 @@
             }
         ],
         "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-non-null-assertion": "error",
         "no-console": "off",
         "no-useless-escape": "error",
