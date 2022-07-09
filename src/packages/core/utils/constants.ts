@@ -1,13 +1,23 @@
 import { ActivityTypes, PresenceStatuses } from 'detritus-client/lib/constants';
-
+/**
+ * api tokens
+ */
 export const TOKENS = {
     discord: process.env.DISCORD_TOKEN || '',
 };
-
+/**
+ * default configurations options
+ *
+ */
 export const DEFAULTS = {
+    /**
+     * the message prefix
+     */
     PREFIX: '.',
 };
-
+/**
+ * presences the bot is using after certain actions
+ */
 export const PRESENCES = {
     STARTUP: {
         status: PresenceStatuses.DND,
@@ -28,7 +38,9 @@ export const PRESENCES = {
         ],
     },
 };
-
+/**
+ * options for all clients
+ */
 export const CLIENT_OPTIONS = {
     SHARD: {
         cache: true,

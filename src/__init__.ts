@@ -1,7 +1,7 @@
-import { join } from 'path';
-import { readFileSync } from 'fs';
 import * as mda from 'module-alias';
-
+import { join } from 'path';
+import { Constants } from 'detritus-client-rest';
+import { Constants as C } from 'detritus-client-socket';
 declare global {
     type int = number;
     // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -12,22 +12,10 @@ declare global {
     }
 }
 
+Reflect.set(Constants, 'ApiVersion', 10);
+Reflect.set(C.ApiVersions, 'GATEWAY', 10);
 mda.addAliases({
     '@blue': join(process.cwd(), 'dist', 'packages'),
 });
-
-function readConfig() {
-    const file = readFileSync(join(process.cwd(), '.config', '.env'), {
-        encoding: 'utf-8',
-    });
-    const lines = file.split('\n');
-
-    for (const line of lines) {
-        const [key, value] = line.split('=');
-        if (process.env[key]) continue;
-        if (!value) continue;
-        process.env[key] = value;
-    }
-}
-
-readConfig();
+import { loadEnv } from '@blue/core/utils/env';
+loadEnv();
